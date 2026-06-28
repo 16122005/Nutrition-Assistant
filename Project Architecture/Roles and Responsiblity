@@ -1,0 +1,21 @@
+In a Nutrition Assistant application, the customer refers to the end user who utilizes the system to monitor and manage their nutrition, meals, and diet plans. The primary roles and responsibilities of the customer are as follows:
+
+1. Registration and Profile Management
+      Customers are responsible for creating an account by providing accurate personal information during registration. They should maintain an up-to-date profile, including details such as age, weight, height, gender, and activity level, to ensure accurate nutritional recommendations.
+
+2. Recording Food Consumption
+    Customers are responsible for logging the food items they consume each day. They can search for food items in the database and record the appropriate serving size or quantity to track their daily nutritional intake.
+
+3. Managing Meals and Diet Plans
+    Customers can create and manage personalized diet plans based on their health goals and dietary preferences. They are responsible for setting the start and end dates of each diet plan, organizing their meals, and updating their plans whenever necessary to achieve their nutritional objectives.
+
+4. Reviewing Nutritional Information
+    Customers can view detailed nutritional information, including calories, carbohydrates, proteins, and fats, for individual food items, meals, and diet plans. This information helps them make informed dietary decisions and maintain a balanced diet.
+
+5. Following Personalized Recommendations
+    The application provides personalized dietary recommendations based on the customer's profile and nutritional goals. Customers are encouraged to follow these recommendations and incorporate the suggested dietary practices into their daily routine.
+
+6. Monitoring Progress
+    Customers can monitor their nutritional intake and overall progress toward their health goals through reports and visual summaries. They should regularly review their progress, analyze their eating habits, and make necessary adjustments to improve their dietary outcomes.
+
+Overall, customers play an active role in the Nutrition Assistant application by maintaining accurate personal information, recording food consumption, managing meals and diet plans, reviewing nutritional information, following personalized recommendations, and tracking their progress toward achieving a healthy lifestyle.
