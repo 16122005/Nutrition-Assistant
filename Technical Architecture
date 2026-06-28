@@ -1,0 +1,17 @@
+The Nutrition Assistant system is structured as a clear distributed system divided into three main operational blocks:
+
+1. User Interface (Frontend)
+   - Built using React.js and styled modern components.
+   - Represents the interface through which users interact with the system, enter fitness metrics, and view macro targets.
+
+2. Backend Services (Server Logic)
+   - Built on Node.js and Express.js.
+   - Includes custom API routes for handling client requests and responses securely.
+   - Houses the core Nutrition Functions module that handles calculations for BMI, BMR, and daily calorie breakdowns.
+
+3. Database Layer (Storage)
+   - Powering data persistence via MongoDB using Mongoose schemas.
+   - Responsibly handles storing user authentication credentials and logs historical diet suggestions chronologically.
+
+4. External Services
+   - Flexible integration capabilities for external nutritional databases or food tracking APIs to dynamically reference menu ingredients.
