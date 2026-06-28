@@ -15,3 +15,4 @@ The Nutrition Assistant system is structured as a clear distributed system divid
 
 4. External Services
    - Flexible integration capabilities for external nutritional databases or food tracking APIs to dynamically reference menu ingredients.
+![Technical Architecture Diagram](architecture-diagram.png)
