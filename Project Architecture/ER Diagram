@@ -1,0 +1,5 @@
+* The User entity has been extended to include additional attributes such as weight, height, gender, and activityLevel, enabling more personalized nutrition and diet recommendations.
+* The Food entity now stores detailed nutritional information, including calories, carbohydrates, proteins, and fats for each food item.
+* The Meal entity has been updated with the userId attribute to associate each meal with a specific user and the date attribute to record when the meal was consumed.
+* The DietPlan entity now includes the userId attribute to link each diet plan to a specific user, along with startDate and endDate to define the duration of the diet plan.
+* The NutritionFact entity has been enhanced with the foreign key attributes mealId and dietPlanId, establishing relationships with the corresponding Meal and DietPlan entities to maintain referential integrity and support efficient data management.
