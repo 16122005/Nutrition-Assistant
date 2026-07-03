@@ -1,0 +1,7 @@
+The Nutrition Assistant system is divided into three main components: User Interface, Backend Services, and External Services.
+
+User Interface: The User Interface component represents the interface through which users interact with the system.
+
+Backend Services: The Backend Services component includes an API for handling user requests and responses, a Database for storing and retrieving data, and a Nutrition Functions module that provides nutrition-related functionalities.
+
+External Services: The External Services component represents any external APIs or services that the system interacts with, such as third-party nutrition databases or APIs.
