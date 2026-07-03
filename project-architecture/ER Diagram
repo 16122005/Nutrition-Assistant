@@ -1,0 +1,10 @@
+The User entity now includes attributes such as weight, height, gender, and Activity Level.
+
+The Food entity includes attributes for calories, carbohydrates, proteins, and fats to represent the nutritional information of each food item.
+
+The Meal entity has new attributes like userId to associate a meal with a specific user and date to store the date of the meal.
+
+The DietPlan entity includes attributes such as userId to link the diet plan with a user, startDate, and endDate to define the duration of the diet plan.
+
+The NutritionFact entity now includes foreign key attributes mealId and diet PlanId to establish relationships with the corresponding entities.
+

@@ -1,0 +1,100 @@
+User Flow Explanation for Customer Role in a Nutrition Assistant Application:
+-----------------------------------------------------------------------------
+
+User Registration & Profile Setup:
+----------------------------------
+
+• The customer opens the Nutrition Assistant Application and registers by creating a new account.
+
+• During registration, the customer provides personal information, including:
+  - Username
+  - Email
+  - Age
+  - Weight
+  - Height
+  - Gender
+  - Activity Level
+
+• After successful registration, the customer can access and update their profile information whenever required.
+
+
+Food Consumption Logging:
+-------------------------
+
+• The customer accesses the Home Dashboard and selects the "Add Food" option.
+
+• The customer searches for food items from the application's food database.
+
+• After selecting a food item, the customer enters:
+  - Quantity
+  - Serving Size
+
+• The selected food and its nutritional information are automatically saved in the customer's daily food log.
+
+
+Diet Plan Creation:
+-------------------
+
+• The customer navigates to the "My Diet Plan" section.
+
+• The customer creates a personalized diet plan based on:
+  - Health Goals (Weight Loss, Weight Gain, Maintenance)
+  - Dietary Preferences
+  - Nutritional Requirements
+
+• The customer sets:
+  - Start Date
+  - End Date
+
+• The diet plan is saved and monitored throughout its duration.
+
+
+Nutritional Information Review:
+-------------------------------
+
+• The application displays detailed nutritional information for every logged food item.
+
+• Users can review nutritional values such as:
+  - Calories
+  - Protein
+  - Carbohydrates
+  - Fats
+
+• Customers can also view:
+  - Daily Nutritional Intake
+  - Meal-wise Nutritional Breakdown
+
+• This information helps customers understand and monitor their eating habits.
+
+
+Following Recommendations:
+--------------------------
+
+• Based on the customer's profile, goals, and food consumption history, the application provides personalized recommendations.
+
+• Recommendations may include:
+  - Increasing Protein Intake
+  - Reducing Sugar Consumption
+  - Improving Portion Sizes
+  - Choosing Healthier Food Alternatives
+
+• Customers can view these recommendations on the Dashboard or through Notifications.
+
+
+Progress Monitoring:
+--------------------
+
+• Customers can monitor their progress toward achieving their health goals.
+
+• The application generates reports and visualizations showing:
+  - Daily Nutritional Intake
+  - Weekly and Monthly Progress
+  - Diet Plan Adherence
+
+• Based on these reports, customers can make necessary adjustments to improve their nutrition and maintain a healthy lifestyle.
+
+
+Summary:
+--------
+
+The customer user flow begins with account registration, followed by profile setup, food logging, diet plan creation, nutritional analysis, personalized recommendations, and progress tracking. This workflow enables customers to effectively manage their nutrition, monitor dietary habits, and achieve their personal health and fitness goals.
