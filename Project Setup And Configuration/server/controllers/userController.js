@@ -4,28 +4,31 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 dotenv.config();
 
+// User Login
 const userLogin = async (req, res) => {
   const { email, password } = req.body;
+  console.log("Login attempt for:", email); // Added for debugging
 
   try {
     const user = await User.findOne({ email });
-
     if (!user) {
+      console.log("Login failed: User not found");
       return res.status(401).json({ error: "No user found" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
+      console.log("Login failed: Invalid credentials");
       return res.status(401).json({ error: "Invalid credentials" });
     }
 
     const token = jwt.sign(
       { id: user._id, isAdmin: user.isAdmin },
-      process.env.JWT_SECRET,
+      process.env.JWT_SECRET || "your_fallback_secret", // Added fallback
       { expiresIn: "1d" }
     );
 
-    res.json({
+    res.status(200).json({
       status: "success",
       token,
       user: {
@@ -36,13 +39,15 @@ const userLogin = async (req, res) => {
       }
     });
   } catch (error) {
+    console.error("Login server error:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };
 
-// User registration
+// User Registration
 const userRegister = async (req, res) => {
   const { name, email, password, isAdmin } = req.body;
+  console.log("Registering:", email);
 
   try {
     const existing = await User.findOne({ email });
@@ -51,7 +56,6 @@ const userRegister = async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-
     const user = await User.create({
       name,
       email,
@@ -59,8 +63,12 @@ const userRegister = async (req, res) => {
       isAdmin: isAdmin || false,
     });
 
-    res.json({ message: "Account created", user: { id: user._id, name, email, isAdmin: user.isAdmin } });
+    res.status(201).json({ 
+      message: "Account created", 
+      user: { id: user._id, name, email, isAdmin: user.isAdmin } 
+    });
   } catch (error) {
+    console.error("Register server error:", error);
     res.status(500).json({ error: "Failed to register" });
   }
 };
@@ -68,4 +76,4 @@ const userRegister = async (req, res) => {
 module.exports = {
   userLogin,
   userRegister
-}
+};

@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
 
-const foodSchema =  mongoose.Schema({
+const foodSchema = mongoose.Schema({
     name: { type: String, required: true },
     grams: { type: String, required: true }
 });
 
 const suggestionSchema = new mongoose.Schema({
-
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     userName: { type: String },
 
@@ -32,6 +31,6 @@ const suggestionSchema = new mongoose.Schema({
     }
 });
 
- const Suggestion = mongoose.model('Suggestion', suggestionSchema);
+const Suggestion = mongoose.model('Suggestion', suggestionSchema);
 
 module.exports = Suggestion;

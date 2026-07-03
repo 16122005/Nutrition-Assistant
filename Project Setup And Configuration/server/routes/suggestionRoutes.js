@@ -8,6 +8,6 @@ router.get('/suggest-nutrition', getSuggestedNutrition);
 router.post('/newplan',protect,saveNewSuggestion);
 router.get('/getsuggestion/:userId',protect,getSuggestionsByUser);
 router.get('/suggestions',protect,isAdmin ,getAllSuggestions);
-router.delete('/suggestion/:id',protect, isAdmin ,deleteSuggestion);
+router.delete('/suggestion/:id', protect, deleteSuggestion);
 
 module.exports = router;

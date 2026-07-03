@@ -73,14 +73,26 @@ const {suggestNutrition} = require("../utils/suggestNutrition.js");
 };
 
  const deleteSuggestion = async (req, res) => {
-  try {
-    await Suggestion.findByIdAndDelete(req.params.id);
-    res.sendStatus(200);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to delete suggestion' });
-  }
-};
+    try {
+        const suggestion = await Suggestion.findById(req.params.id);
 
+        if (!suggestion) {
+            return res.status(404).json({ message: "Suggestion not found" });
+        }
+
+        // Logic: Allow if the user IS an admin OR if the userId of the 
+        // suggestion matches the ID of the user who is logged in (req.user.id)
+        if (req.user.isAdmin || suggestion.userId.toString() === req.user.id.toString()) {
+            await Suggestion.findByIdAndDelete(req.params.id);
+            res.status(200).json({ message: "Deleted successfully" });
+        } else {
+            // This prevents the Forbidden error if they own their own data
+            res.status(403).json({ message: "You do not have permission to delete this." });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
 module.exports = {
   getSuggestedNutrition,
   saveNewSuggestion,

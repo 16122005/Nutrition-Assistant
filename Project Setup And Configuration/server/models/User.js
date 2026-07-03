@@ -1,25 +1,25 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  isAdmin: {
-    type: Boolean,
-    default: false, 
-  },
+// Define the blueprint for your user account documents
+const UserSchema = new mongoose.Schema({
+    name: { 
+        type: String, 
+        required: true 
+    },
+    email: { 
+        type: String, 
+        required: true, 
+        unique: true 
+    },
+    password: { 
+        type: String, 
+        required: true 
+    },
+    isAdmin: { 
+        type: Boolean, 
+        default: false 
+    }
 });
 
-const User = mongoose.model("User", userSchema);
-
-module.exports = User;
+// Export the template model as 'User' so server.js can find and interact with it
+module.exports = mongoose.model('User', UserSchema);
