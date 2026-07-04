@@ -13,7 +13,7 @@ const app = express();
 const corsOptions = {
     origin: [
         'http://localhost:5173', 
-        'https://nutrition-assistant-1.onrender.com' // Add your live frontend URL here
+        'https://nutrition-assistant-2.onrender.com' // Add your live frontend URL here
     ],
     credentials: true
 };
