@@ -30,7 +30,7 @@ const Newplan = () => {
     try {
       setIsLoading(true);
 
-      const response = await axios.get('http://localhost:4000/suggest-nutrition', {
+      const response = await axios.get('https://nutrition-assistant-2.onrender.com/suggest-nutrition', {
         params: { age, height, weight, activityLevel: '' },
       });
 
@@ -47,7 +47,7 @@ const Newplan = () => {
       };
 
       await axios.post(
-        'http://localhost:4000/newplan',
+        'https://nutrition-assistant-2.onrender.com/newplan',
         postBody,
         {
           headers: {

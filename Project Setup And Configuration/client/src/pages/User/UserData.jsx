@@ -10,7 +10,7 @@ const UserData = () => {
 
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/users');
+      const response = await axios.get('https://nutrition-assistant-2.onrender.com/users');
       setUserData(response.data[0]); 
     } catch (error) {
       console.error('Error fetching user data:', error);

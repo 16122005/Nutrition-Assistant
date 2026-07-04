@@ -16,7 +16,7 @@ const Register = () => {
 
     try {
       // FIX: Explicitly pass { withCredentials: true } in the post request
-      const result = await axios.post("http://localhost:4000/register", payload, {
+      const result = await axios.post("https://nutrition-assistant-2.onrender.com/register", payload, {
         withCredentials: true
       });
 

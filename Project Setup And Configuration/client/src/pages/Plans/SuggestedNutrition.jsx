@@ -15,7 +15,7 @@ const SuggestedNutrition = () => {
     const user = userStr ? JSON.parse(userStr) : null;
 
     if (user && user.id && token) {
-      axios.get(`http://localhost:4000/getsuggestion/${user.id}`, {
+      axios.get(`https://nutrition-assistant-2.onrender.com/getsuggestion/${user.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +39,7 @@ const SuggestedNutrition = () => {
 
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:4000/suggestion/${taskId}`, {
+      await axios.delete(`https://nutrition-assistant-2.onrender.com/suggestion/${taskId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

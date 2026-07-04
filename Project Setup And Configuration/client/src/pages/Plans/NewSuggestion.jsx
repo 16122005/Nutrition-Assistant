@@ -11,7 +11,7 @@ const AdminPanel = () => {
     const token = localStorage.getItem('token');
     try {
       // Ensure your backend endpoint /suggestions is correct
-      const res = await axios.get('http://localhost:4000/suggestions', {
+      const res = await axios.get('https://nutrition-assistant-2.onrender.com/suggestions', {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log("Suggestions Data:", res.data); // Debugging: check what data looks like
@@ -28,7 +28,7 @@ const AdminPanel = () => {
     if (!window.confirm('Are you sure you want to delete this suggestion?')) return;
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:4000/suggestion/${id}`, {
+      await axios.delete(`https://nutrition-assistant-2.onrender.com/suggestion/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuggestions((prev) => prev.filter((s) => s._id !== id));

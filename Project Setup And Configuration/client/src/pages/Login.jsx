@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const payload = { email, password };
-      const res = await axios.post("http://localhost:4000/login", payload);
+      const res = await axios.post("https://nutrition-assistant-2.onrender.com/login", payload);
 
       if (res.data.status === "success") {
         localStorage.setItem("token", res.data.token);
